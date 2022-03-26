@@ -1,12 +1,8 @@
 import requests
-import configparser
-
+from data.config import API_KEY
 
 API_URL = 'https://min-api.cryptocompare.com/data'
 
-
-config = configparser.ConfigParser()
-config.read_file(open('apis.cfg'))
 
 class CryptoCompare(object):
 
