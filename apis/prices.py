@@ -8,7 +8,7 @@ class CryptoCompare(object):
 
     def __init__(self):
         self.base_url = API_URL
-        self.api_key = config.get('CRYPTOCOMPARE', 'API_KEY')
+        self.api_key = API_KEY
 
     def __request(self, method, params):
         url = self.base_url + method
