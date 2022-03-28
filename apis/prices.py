@@ -1,5 +1,6 @@
 import requests
 from data.config import API_KEY
+import json
 
 API_URL = 'https://min-api.cryptocompare.com/data'
 
@@ -16,15 +17,12 @@ class CryptoCompare(object):
         r = requests.get(url = url, params = params)
         res = r.json()
         
-        if res['Response'] == 'Error':
-            return 'API Error'
-        else:
-            return res
+        return res
 
-    def get_price(self, ticker, convert):
+    def get_price(self, ticker, convert='usdt'):
         params = {
             'api_key':self.api_key,
             'fsym': ticker,
             'tsyms': convert
         }
-        return self.__request(method = '/price')
+        return self.__request(method = '/price', params=params)
