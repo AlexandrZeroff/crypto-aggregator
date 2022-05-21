@@ -1,5 +1,5 @@
 # Crypto Aggregator
-Telegram bot which This bot is my 'studying' project for improving Python skills. \
+This Telegram bot is my 'studying' project for improving Python skills. \
 
 Used [aiogram](https://pypi.org/project/aiogram/) - pretty simple and fully asynchronous framework for Telegram Bot API written in Python 3.7 with asyncio and aiohttp. It helps make Telegram bots faster and simpler.
 
